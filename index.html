@@ -3,512 +3,697 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freddy's Portafolio</title>
+    <title>Freddy Riobo - Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- AOS -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#000020',
-                        secondary: '#171a4a',
-                        accent: '#2f2c79',
-                        light: '#e8c39e',
-                        cream: '#f5e1ce',
+                        primary: '#0A2342',
+                        secondary: '#DA751C',
+                        accent: '#008080',
+                        light: '#F5F5F5',
+                        cream: '#FFFDF7'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
                     }
                 }
             }
         }
     </script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-     </script>
-     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
- </head>
- <body class="bg-cream text-primary">
 </head>
-<body class="bg-cream text-primary">
-    <!-- Hero Section -->
-    <section class="hero-bg min-h-screen flex items-center justify-center text-white relative overflow-hidden">
-        <div class="absolute inset-0 bg-black opacity-40"></div>
-        <div class="container mx-auto px-6 z-10 py-20">
-            <div class="text-center animate-fade-in">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4">Te doy la Bienvenida a mi Portafolio</h1>
-                <h2 class="text-3xl md:text-5xl font-semibold mb-2">Soy Freddy Riobo</h2>
-                <p class="text-xl md:text-2xl mb-8">Full Stack Junior Web Developer</p>
-                <div class="flex justify-center space-x-6">
-                    <a href="https://github.com/freddy-rioboo" class="text-3xl hover:text-light transition-colors" target="_blank" title="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/" class="text-3xl hover:text-light transition-colors" target="_blank" title="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
+<body class="bg-light text-dark font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white bg-opacity-90 backdrop-blur-sm shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-primary">Freddy<span class="text-secondary">Riobo</span></span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-primary transition-colors">Sobre mí</a>
+                    <a href="#experience" class="text-gray-600 hover:text-primary transition-colors">Experiencia</a>
+                    <a href="#education" class="text-gray-600 hover:text-primary transition-colors">Educación</a>
+                    <a href="#skills" class="text-gray-600 hover:text-primary transition-colors">Habilidades</a>
+                    <a href="projects.html" class="text-gray-600 hover:text-primary transition-colors">Proyectos</a>
+                    <a href="#contact" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition-colors">Contacto</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600">
+                        <i data-feather="menu" class="w-6 h-6"></i>
+                    </button>
                 </div>
             </div>
         </div>
-        
-        <div class="absolute bottom-10 left-0 right-0 flex justify-center">
-            <a href="#about" class="text-white text-4xl animate-bounce">
-                <i class="fas fa-chevron-down"></i>
-            </a>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary">Sobre mí</a>
+                <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary">Experiencia</a>
+                <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary">Educación</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary">Habilidades</a>
+                <a href="projects.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary">Proyectos</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium bg-primary text-white">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 md:pt-32 md:pb-24 gradient-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 font-serif">
+                        Freddy <span class="text-yellow-300">Riobo</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl text-indigo-100 mb-6">
+                        Full Stack Web Developer - AI
+                    </h2>
+                    <p class="text-lg md:text-xl text-indigo-100 mb-8 max-w-2xl">
+                        De profesor de música a creador de soluciones digitales. Apasionado por resolver problemas y construir experiencias web excepcionales.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="bg-white text-primary font-semibold px-6 py-3 rounded-lg hover:bg-indigo-50 transition-colors">
+                            Contáctame
+                        </a>
+                        <a href="projects.html" class="border-2 border-white text-white font-semibold px-6 py-3 rounded-lg hover:bg-white hover:text-primary transition-colors">
+                            Ver Proyectos
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <img src="https://riobo-portafolio.vercel.app/img/freddyriobo.png" alt="Freddy Riobo" class="profile-img rounded-full w-64 h-64 md:w-80 md:h-80 object-cover floating">
+                        <div class="absolute -bottom-4 -right-4 bg-secondary text-white font-bold px-4 py-2 rounded-lg">
+                            ¡Hola!
+                        </div>
+                    </div>
+                </div>
+</div>
         </div>
     </section>
 
-    <!-- Main Content -->
-    <main data-aos="fade-up" class="container mx-auto px-6 py-12">
-        <!-- About Section -->
-        <section id="about" class="mb-20 scroll-mt-20">
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                <div class="p-8">
-                    <h2 class="text-3xl font-bold mb-6 text-secondary border-b-2 border-accent pb-2">Sobre mí</h2>
-                    <div class="flex flex-col lg:flex-row gap-8">
-                        <div class="lg:w-1/3">
-                            <img src="img/freddyriobo.png" 
-                                 alt="Freddy Riobo" 
-                                 class="w-full h-auto rounded-lg object-cover shadow-md">
-                        </div>
-                        <div class="lg:w-2/3">
-                            <p data-aos="fade-right" class="mb-4 text-lg">
-                                Soy Freddy Riobo, un desarrollador web full-stack con una pasión por resolver 
-                                problemas y una trayectoria profesional un tanto inusual. Aunque mi camino me llevó 
-                                a ser profesor de música y a coordinar eventos internacionales por más de 10 años, 
-                                siempre he sido un eterno aprendiz con un interés innato en cómo funcionan las cosas, 
-                                lo que finalmente me llevó al fascinante mundo del desarrollo de software.
-                            </p>
-                            <p data-aos="fade-left" class="mb-4 text-lg">
-                                Mi experiencia en la pedagogía me dotó de habilidades que hoy aplico a diario en el código: 
-                                la capacidad de desglosar conceptos complejos en ideas claras, un enfoque meticuloso en la 
-                                resolución creativa de problemas y una gran habilidad para la colaboración en equipo. 
-                                Aprendí que la clave del éxito no solo reside en la técnica, sino en entender las necesidades 
-                                del usuario final y en comunicar ideas de forma efectiva, algo que considero fundamental para 
-                                crear productos exitosos.
-                            </p>
-                            <p data-aos="fade-right" class="mb-4 text-lg">
-                                He liderado el desarrollo de proyectos desde cero, como una webapp para la gestión médica (Prescriba.net), 
-                                y he contribuido a la creación de sitios web corporativos y e-commerce. Me entusiasma trabajar con 
-                                tecnologías como Python (Flask, Django), HTML, CSS, JavaScript y bases de datos como PostgreSQL y 
-                                MySQL. Estoy en constante aprendizaje, siempre buscando nuevas herramientas y mejores prácticas para 
-                                perfeccionar mi oficio.
-                            </p>
-                            <p data-aos="fade-left" class="text-lg">
-                                Fuera del código, sigo conectado con la música. Me gusta pensar que, así como en una partitura, 
-                                cada línea de código debe tener un propósito y contribuir a un todo armonioso. Busco un rol 
-                                donde mis habilidades técnicas y blandas se complementen para crear soluciones innovadoras y, 
-                                sobre todo, para seguir aprendiendo y creciendo junto a un equipo apasionado.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 font-serif">Sobre <span class="text-primary">mí</span></h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
             </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section data-aos="flip-left" id="projects" class="mb-20 scroll-mt-20">
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                <div class="p-8">
-                    <h2 class="text-3xl font-bold mb-8 text-secondary border-b-2 border-accent pb-2">Proyectos realizados</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <!-- Project 1 -->
-                        <div data-aos="fade-zoom-in"
-                            data-aos-easing="ease-in-back"
-                            data-aos-delay="300"
-                            data-aos-offset="0" class="project-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-                            <a href="https://kairo-solution-fr.vercel.app/" target="_blank">
-                                <img src="img/ksc.png" 
-                                     alt="Kairo Solution Consulting" 
-                                     class="w-full h-48 object-cover">
-                                <div class="p-6">
-                                    <h3 class="text-xl font-semibold mb-2 text-secondary">Kairo Solution Consulting</h3>
-                                    <p class="text-accent">Junio 2023</p>
-                                </div>
-                            </a>
-                        </div>
-                        
-                        <!-- Project 2 -->
-                        <div data-aos="fade-zoom-in"
-                            data-aos-easing="ease-in-back"
-                            data-aos-delay="400"
-                            data-aos-offset="0" class="project-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-                            <a href="https://www.ligiamariacoach.com/" target="_blank">
-                                <img src="img/ligiamariacoach.png" 
-                                     alt="Ligiamariacoach" 
-                                     class="w-full h-48 object-cover">
-                                <div class="p-6">
-                                    <h3 class="text-xl font-semibold mb-2 text-secondary">Ligiamariacoach</h3>
-                                    <p class="text-accent">Abril 2025</p>
-                                </div>
-                            </a>
-                        </div>
-                        
-                        <!-- Project 3 -->
-                        <div data-aos="fade-zoom-in"
-                            data-aos-easing="ease-in-back"
-                            data-aos-delay="500"
-                            data-aos-offset="0" class="project-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-                            <a href="https://www.prescriba.net/" target="_blank">
-                                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" 
-                                     alt="Prescriba" 
-                                     class="w-full h-48 object-cover">
-                                <div class="p-6">
-                                    <h3 class="text-xl font-semibold mb-2 text-secondary">Prescriba</h3>
-                                    <p class="text-accent">Agosto 2025</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <p class="text-lg mb-6">
+                        Soy Freddy Riobo, un desarrollador web full-stack con una pasión por resolver problemas y una trayectoria profesional un tanto inusual. Aunque mi camino me llevó a ser profesor de música y a coordinar eventos internacionales por más de 10 años, siempre he sido un eterno aprendiz con un interés innato en cómo funcionan las cosas, lo que finalmente me llevó al fascinante mundo del desarrollo de software.
+                    </p>
+                    <p class="text-lg mb-6">
+                        Mi experiencia en la pedagogía me dotó de habilidades que hoy aplico a diario en el código: la capacidad de desglosar conceptos complejos en ideas claras, un enfoque meticuloso en la resolución creativa de problemas y una gran habilidad para la colaboración en equipo.
+                    </p>
+                    <p class="text-lg">
+                        He liderado el desarrollo de proyectos desde cero, como una webapp para la gestión médica (Prescriba.net), y he contribuido a la creación de sitios web corporativos y e-commerce. Me entusiasma trabajar con tecnologías como Python (Flask, Django), HTML, CSS, JavaScript y bases de datos como PostgreSQL y MySQL.
+                    </p>
                 </div>
-            </div>
-        </section>
-
-        <!-- Work Experience Section -->
-        <section data-aos="flip-right" id="experience" class="mb-20 scroll-mt-20">
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                <div class="p-8">
-                    <h2 class="text-3xl font-bold mb-8 text-secondary border-b-2 border-accent pb-2">Experiencia Laboral</h2>
-                    
-                    <div class="space-y-8">
-                        <!-- Job 1 -->
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="pl-6">
-                                <h3 class="text-xl font-semibold text-secondary">Desarrollador web Freelance</h3>
-                                <h4 class="text-lg font-medium mb-2">
-                                    <a href="http://prescriba.net" class="text-accent hover:underline" target="_blank">Prescriba.net</a>
-                                </h4>
-                                <p class="text-sm text-gray-600 mb-4">2025</p>
-                                <ul class="list-disc pl-5 space-y-2">
-                                    <li>Lideré el desarrollo de una aplicación Flask desde cero para la gestión de historias clínicas y consultas pediátricas</li>
-                                    <li>Implementé un sistema de autenticación seguro con Flask-Login y Flask-WTF, modelos de base de datos con SQLAlchemy/Alembic y formularios dinámicos con WTForms y JavaScript.</li>
-                                    <li>Diseñe una interfaz intuitiva con bootstrap, HTML y CSS incluyendo funcionalidades de búsqueda y generación de reportes.</li>
-                                </ul>
-                                <div class="mt-4 flex flex-wrap gap-2">
-                                    <span class="skill-badge px-3 py-1 rounded-full text-sm">Python</span>
-                                    <span class="skill-badge px-3 py-1 rounded-full text-sm">Flask</span>
-                                    <span class="skill-badge px-3 py-1 rounded-full text-sm">SQLite</span>
-                                    <span class="skill-badge px-3 py-1 rounded-full text-sm">HTML</span>
-                                    <span class="skill-badge px-3 py-1 rounded-full text-sm">CSS3</span>
-                                    <span class="skill-badge px-3 py-1 rounded-full text-sm">Bootstrap 5</span>
-                                    <span class="skill-badge px-3 py-1 rounded-full text-sm">JavaScript</span>
-                                    <span class="skill-badge px-3 py-1 rounded-full text-sm">Git</span>
-                                    <span class="skill-badge px-3 py-1 rounded-full text-sm">Github</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Job 2 -->
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="pl-6">
-                                <h3 class="text-xl font-semibold text-secondary">Desarrollador web Freelance</h3>
-                                <h4 class="text-lg font-medium mb-2">
-                                    <a href="http://ligiamariacoach.com" class="text-accent hover:underline" target="_blank">Ligiamariacoach.com</a>
-                                </h4>
-                                <p class="text-sm text-gray-600 mb-4">2025</p>
-                                <ul class="list-disc pl-5 space-y-2">
-                                    <li>Diseñé y desarrollé un sitio responsivo con pasarela de pago Paypal integrada para suscripciones y pago de servicios.</li>
-                                    <li>Implementé un chatbot personalizado (sendpulse) en el sitio web para mejorar la experiencia de clientes y automatizar respuestas.</li>
-                                    <li>Colaboré estrechamente con la cliente en un proceso iterativo para refinar requisitos y ofrecer soluciones efectivas.</li>
-                                    <li>Desplegué el sitio web con namecheap hosting service configurada con Cpanel.</li>
-                                </ul>
-                                <div class="mt-4 flex flex-wrap gap-2">
-                                    <span class="skill-badge px-3 py-1 rounded-full text-sm">HTML5</span>
-                                    <span class="skill-badge px-3 py-1 rounded-full text-sm">CSS3</span>
-                                    <span class="skill-badge px-3 py-1 rounded-full text-sm">Bootstrap 5</span>
-                                    <span class="skill-badge px-3 py-1 rounded-full text-sm">JavaScript</span>
-                                    <span class="skill-badge px-3 py-1 rounded-full text-sm">Paypal API</span>
-                                    <span class="skill-badge px-3 py-1 rounded-full text-sm">Figma</span>
-                                    <span class="skill-badge px-3 py-1 rounded-full text-sm">Git</span>
-                                    <span class="skill-badge px-3 py-1 rounded-full text-sm">Github</span>
-                                    <span class="skill-badge px-3 py-1 rounded-full text-sm">Cpanel</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Job 3 -->
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="pl-6">
-                                <h3 class="text-xl font-semibold text-secondary">Kairo Solution Consulting</h3>
-                                <h4 class="text-lg font-medium mb-2">
-                                    <a href="https://kairo-solution-fr.vercel.app/" class="text-accent hover:underline" target="_blank">Front-End Developer</a>
-                                </h4>
-                                <p class="text-sm text-gray-600 mb-4">2023</p>
-                                <ul class="list-disc pl-5 space-y-2">
-                                    <li>Desarrollé un sitio web estático, responsivo y de alto rendimiento a partir de un diseño dado.</li>
-                                    <li>Integré animaciones (AOS Library) para mejorar la interactividad y experiencia de usuario.</li>
-                                    <li>Gestioné el despliegue continuo y publicación a través de Vercel y control de versiones con Git y Github.</li>
-                                </ul>
-                                <div class="mt-4 flex flex-wrap gap-2">
-                                    <span class="skill-badge px-3 py-1 rounded-full text-sm">HTML5</span>
-                                    <span class="skill-badge px-3 py-1 rounded-full text-sm">CSS3</span>
-                                    <span class="skill-badge px-3 py-1 rounded-full text-sm">Bootstrap 5</span>
-                                    <span class="skill-badge px-3 py-1 rounded-full text-sm">JavaScript</span>
-                                    <span class="skill-badge px-3 py-1 rounded-full text-sm">Git</span>
-                                    <span class="skill-badge px-3 py-1 rounded-full text-sm">Github</span>
-                                    <span class="skill-badge px-3 py-1 rounded-full text-sm">Vercel</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Relevant Experience -->
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="pl-6">
-                                <h3 class="text-xl font-semibold text-secondary">Experiencia Profesional Relevante</h3>
-                                <div class="mt-4 space-y-6">
-                                    <div>
-                                        <h4 class="text-lg font-medium mb-2">Profesor de Música y Pedagogía</h4>
-                                        <p class="text-sm text-gray-600 mb-2">2013 - Presente</p>
-                                        <ul class="list-disc pl-5 space-y-1">
-                                            <li>Gestión de Proyectos: Planificación y ejecución de currículos educativos complejos, análogo a gestionar ciclos de desarrollo de software.</li>
-                                            <li>Comunicación & Colaboración: Capacidad demostrada para traducir conceptos complejos en ideas accesibles para diversas audiencias.</li>
-                                            <li>Adaptabilidad & Aprendizaje Continuo: Habilidad comprobada para aprender nuevas metodologías y adaptarse a entornos dinámicos.</li>
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-lg font-medium mb-2">Coordinador Internacional & Emprendedor</h4>
-                                        <p class="text-sm text-gray-600 mb-2">2013 - Enero 2022</p>
-                                        <ul class="list-disc pl-5 space-y-1">
-                                            <li>Liderazgo & Gestión de Equipos: Dirigí equipos multidisciplinarios de hasta 14 personas.</li>
-                                            <li>Comunicación Intercultural: Comunicación efectiva (en español e inglés) con equipos y clientes de diversos orígenes culturales.</li>
-                                            <li>Gestión de Clientes & Proyectos: Coordiné logística de eventos internacionales y fundé una startup de alimentos.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>            
-        </section>
-
-        <!-- Education Section -->
-        <section data-aos="flip-left" id="education" class="mb-20 scroll-mt-20">
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                <div class="p-8">
-                    <h2 class="text-3xl font-bold mb-8 text-secondary border-b-2 border-accent pb-2">Educación, certificaciones y Cursos</h2>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <!-- Formal Education -->
-                        <div class="bg-light bg-opacity-20 p-6 rounded-lg border border-light">
-                            <p class="text-sm text-accent font-medium mb-2">Noviembre 2023 - Abril 2025</p>
-                            <h3 class="text-xl font-semibold mb-2 text-secondary">Máster en Pedagogía Musical</h3>
-                            <p class="text-gray-700">Universidad Internacional de la Rioja UNIR (España)</p>
-                            <ul class="mt-2 list-disc pl-5 text-sm text-gray-600 space-y-1">
-                                <li>Comunicación Técnica y Pedagógica</li>
-                                <li>Adaptabilidad y Resolución Creativa de Problemas</li>
-                                <li>Competencia Digital y Gestión de Herramientas Colaborativas</li>
+                <div class="md:w-1/2">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                        <h3 class="text-2xl font-bold mb-6 text-primary">Mi Filosofía</h3>
+<p class="text-lg mb-6">
+                            Fuera del código, sigo conectado con la música. Me gusta pensar que, así como en una partitura, cada línea de código debe tener un propósito y contribuir a un todo armonioso.
+                        </p>
+                        <blockquote class="border-l-4 border-accent pl-4 italic text-gray-700">
+"La clave del éxito no solo reside en la técnica, sino en entender las necesidades del usuario final y en comunicar ideas de forma efectiva."
+                        </blockquote>
+                        <div class="mt-8">
+                            <h4 class="font-bold text-lg mb-3">Valores que guían mi trabajo:</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-center">
+                                    <i data-feather="check-circle" class="text-accent mr-2"></i>
+                                    <span>Enfoque en el usuario</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i data-feather="check-circle" class="text-accent mr-2"></i>
+                                    <span>Aprendizaje continuo</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i data-feather="check-circle" class="text-accent mr-2"></i>
+                                    <span>Colaboración efectiva</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i data-feather="check-circle" class="text-accent mr-2"></i>
+                                    <span>Solución creativa de problemas</span>
+                                </li>
                             </ul>
-                        </div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                        <div class="bg-light bg-opacity-20 p-6 rounded-lg border border-light">
-                            <p class="text-sm text-accent font-medium mb-2">Septiembre 2008 - Junio 2015</p>
-                            <h3 class="text-xl font-semibold mb-2 text-secondary">Profesor de Música</h3>
-                            <p class="text-gray-700">Universidad Pedagógica Experimental Libertador, Venezuela</p>
-                            <ul class="mt-2 list-disc pl-5 text-sm text-gray-600 space-y-1">
-                                <li>Comunicación y Formación Efectiva</li>
-                                <li>Gestión de Stakeholders</li>
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 font-serif">Mis <span class="text-primary">Proyectos</span></h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+                <p class="mt-6 text-xl text-gray-600 max-w-2xl mx-auto">
+                    Descubre algunos de mis trabajos más recientes
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <img src="img/prescriba.png" alt="Prescriba.net" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Prescriba.net</h3>
+                        <p class="text-gray-600 mb-4">Aplicación Flask para gestión médica de historias clínicas y consultas pediátricas.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Python</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Flask</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">SQLite</span>
+                        </div>
+                        <a href="http://prescriba.net/" target="_blank" class="text-accent font-semibold hover:underline">Ver Proyecto</a>
+</div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <img src="img/ligiamariacoach.png" alt="Ligiamariacoach.com" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Ligiamariacoach.com</h3>
+                        <p class="text-gray-600 mb-4">Sitio responsivo con pasarela de pago PayPal para suscripciones y servicios.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">HTML5</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">CSS3</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">JavaScript</span>
+                        </div>
+                        <a href="http://ligiamariacoach.com/" target="_blank" class="text-accent font-semibold hover:underline">Ver Proyecto</a>
+</div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <img src="img/ksc.png" alt="Kairo Solution Consulting" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Kairo Solution Consulting</h3>
+                        <p class="text-gray-600 mb-4">Sitio web estático responsivo con animaciones y despliegue en Vercel.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">HTML5</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">CSS3</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Bootstrap</span>
+                        </div>
+                        <a href="#" class="text-accent font-semibold hover:underline">Ver Proyecto</a>
+</div>
+                </div>
+            </div>
+            <!--<div class="text-center mt-12">
+                <a href="projects.html" class="bg-primary text-white font-semibold px-6 py-3 rounded-lg hover:bg-secondary transition-colors">
+                    Ver Todos los Proyectos
+                </a>
+            </div> -->
+</div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section-padding bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 font-serif">Experiencia <span class="text-primary">Laboral</span></h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+            <div class="space-y-12">
+                <!-- Experience 1 -->
+                <div class="experience-card bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/4 mb-6 md:mb-0">
+                            <h3 class="text-xl font-bold text-primary">Desarrollador web Freelance</h3>
+                            <p class="text-gray-600">2025</p>
+                            <a href="http://prescriba.net/" class="text-secondary font-semibold hover:underline">Prescriba.net</a>
+                        </div>
+<div class="md:w-3/4">
+                            <h4 class="text-2xl font-bold mb-4">Desarrollo de aplicación Flask para gestión médica</h4>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex">
+                                    <i data-feather="arrow-right-circle" class="text-accent mr-2 mt-1"></i>
+                                    <span>Lideré el desarrollo de una aplicación Flask desde cero para la gestión de historias clínicas y consultas pediátricas</span>
+                                </li>
+                                <li class="flex">
+                                    <i data-feather="arrow-right-circle" class="text-accent mr-2 mt-1"></i>
+                                    <span>Implementé un sistema de autenticación seguro con Flask-Login y Flask-WTF</span>
+                                </li>
+                                <li class="flex">
+                                    <i data-feather="arrow-right-circle" class="text-accent mr-2 mt-1"></i>
+                                    <span>Diseñe una interfaz intuitiva con bootstrap, HTML y CSS incluyendo funcionalidades de búsqueda y generación de reportes</span>
+                                </li>
                             </ul>
-                        </div>
-
-                        <!-- Certifications -->
-                        <div class="bg-light bg-opacity-20 p-6 rounded-lg border border-light">
-                            <p class="text-sm text-accent font-medium mb-2">2023</p>
-                            <h3 class="text-xl font-semibold mb-2 text-secondary">Scrum Foundation Professional Certificate (SFPC)</h3>
-                            <p class="text-gray-700">CertiPro</p>
-                        </div>
-
-                        <!-- Courses -->
-                        <div class="bg-light bg-opacity-20 p-6 rounded-lg border border-light">
-                            <p class="text-sm text-accent font-medium mb-2">2022</p>
-                            <h3 class="text-xl font-semibold mb-2 text-secondary">Accediendo a datos con Python: Web Scraping y APIs</h3>
-                            <p class="text-gray-700">Universidad Anáhuac (edX)</p>
-                            <p class="mt-2 text-sm text-gray-600">Obtención y manipulación de datos web usando técnicas de Web Scraping y consumo de APIs RESTful con Python.</p>
-                        </div>
-                        
-                        <div class="bg-light bg-opacity-20 p-6 rounded-lg border border-light">
-                            <p class="text-sm text-accent font-medium mb-2">2024 - Presente</p>
-                            <h3 class="text-xl font-semibold mb-2 text-secondary">CS50's Web Programming with Python and JavaScript</h3>
-                            <p class="text-gray-700">HarvardX (edX)</p>
-                        </div>
-                        
-                        <div class="bg-light bg-opacity-20 p-6 rounded-lg border border-light">
-                            <p class="text-sm text-accent font-medium mb-2">2023-2024</p>
-                            <h3 class="text-xl font-semibold mb-2 text-secondary">Python Essentials 2</h3>
-                            <p class="text-gray-700">Cisco Networking Academy</p>
-                        </div>
-
-                        <div class="bg-light bg-opacity-20 p-6 rounded-lg border border-light">
-                            <p class="text-sm text-accent font-medium mb-2">2022</p>
-                            <h3 class="text-xl font-semibold mb-2 text-secondary">Introducción al Desarrollo Web I & II</h3>
-                            <p class="text-gray-700">Google Activate</p>
-                            <p class="mt-2 text-sm text-gray-600">Fundamentos sólidos de HTML y CSS, entendiendo la estructura, estilo y funcionalidad básica de páginas web.</p>
-                        </div>
-
-                        <div class="bg-light bg-opacity-20 p-6 rounded-lg border border-light">
-                            <p class="text-sm text-accent font-medium mb-2">2022</p>
-                            <h3 class="text-xl font-semibold mb-2 text-secondary">Learn to Program: The Fundamentals</h3>
-                            <p class="text-gray-700">University of Toronto (Coursera)</p>
-                        </div>
-
-                        <div class="bg-light bg-opacity-20 p-6 rounded-lg border border-light">
-                            <p class="text-sm text-accent font-medium mb-2">2022</p>
-                            <h3 class="text-xl font-semibold mb-2 text-secondary">Introduction to Python Programming I</h3>
-                            <p class="text-gray-700">Pontificia Universidad Católica de Chile (Coursera)</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Languages Section -->
-        <section data-aos="flip-right" id="languages" class="mb-20 scroll-mt-20">
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                <div class="p-8">
-                    <h2 class="text-3xl font-bold mb-8 text-secondary border-b-2 border-accent pb-2">Idiomas</h2>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="bg-light bg-opacity-10 p-6 rounded-lg border border-light">
-                            <h3 class="text-xl font-semibold text-secondary">Inglés</h3>
-                            <p class="text-gray-700">Avanzado, nivel C1</p>
-                            <div class="w-full bg-gray-200 rounded-full h-2.5 mt-2">
-                                <div class="bg-accent h-2.5 rounded-full" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="bg-light bg-opacity-10 p-6 rounded-lg border border-light">
-                            <h3 class="text-xl font-semibold text-secondary">Español</h3>
-                            <p class="text-gray-700">Nativo</p>
-                            <div class="w-full bg-gray-200 rounded-full h-2.5 mt-2">
-                                <div class="bg-accent h-2.5 rounded-full" style="width: 100%"></div>
+<div class="flex flex-wrap gap-2">
+                                <span class="skill-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Python</span>
+                                <span class="skill-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Flask</span>
+                                <span class="skill-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">SQLite</span>
+                                <span class="skill-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">HTML</span>
+                                <span class="skill-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">CSS3</span>
+                                <span class="skill-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Bootstrap 5</span>
+                                <span class="skill-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                                <span class="skill-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Git</span>
+                                <span class="skill-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Github</span>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Contact Section -->
-        <section data-aos="flip-up" id="contact" class="scroll-mt-20">
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                <div class="p-8">
-                    <h2 class="text-3xl font-bold mb-8 text-secondary border-b-2 border-accent pb-2">Contacto</h2>
-                    
-                    <form action="https://formsubmit.co/rioboo.2@hotmail.com" method="POST" class="space-y-6">
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Correo electrónico</label>
-                            <input type="email" name="email" id="email" required 
-                                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none transition">
+                <!-- Experience 2 -->
+                <div class="experience-card bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/4 mb-6 md:mb-0">
+                            <h3 class="text-xl font-bold text-primary">Desarrollador web Freelance</h3>
+                            <p class="text-gray-600">2025</p>
+                            <a href="http://ligiamariacoach.com/" class="text-secondary font-semibold hover:underline">Ligiamariacoach.com</a>
+                        </div>
+<div class="md:w-3/4">
+                            <h4 class="text-2xl font-bold mb-4">Sitio responsivo con pasarela de pago</h4>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex">
+                                    <i data-feather="arrow-right-circle" class="text-accent mr-2 mt-1"></i>
+                                    <span>Diseñé y desarrollé un sitio responsivo con pasarela de pago Paypal integrada para suscripciones y pago de servicios</span>
+                                </li>
+                                <li class="flex">
+                                    <i data-feather="arrow-right-circle" class="text-accent mr-2 mt-1"></i>
+                                    <span>Implementé un chatbot personalizado (sendpulse) en el sitio web para mejorar la experiencia de clientes</span>
+                                </li>
+                                <li class="flex">
+                                    <i data-feather="arrow-right-circle" class="text-accent mr-2 mt-1"></i>
+                                    <span>Colaboré estrechamente con la cliente en un proceso iterativo para refinar requisitos</span>
+                                </li>
+                            </ul>
+<div class="flex flex-wrap gap-2">
+                                <span class="skill-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">HTML5</span>
+                                <span class="skill-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">CSS3</span>
+                                <span class="skill-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Bootstrap 5</span>
+                                <span class="skill-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                                <span class="skill-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Paypal API</span>
+                                <span class="skill-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Figma</span>
+                                <span class="skill-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Git</span>
+                                <span class="skill-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Github</span>
+                                <span class="skill-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Cpanel</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="experience-card bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/4 mb-6 md:mb-0">
+                            <h3 class="text-xl font-bold text-primary">Kairo Solution Consulting</h3>
+                            <p class="text-gray-600">2023</p>
+                            <span class="text-secondary font-semibold">Front-End Developer</span>
+                        </div>
+<div class="md:w-3/4">
+                            <h4 class="text-2xl font-bold mb-4">Sitio web estático responsivo</h4>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex">
+                                    <i data-feather="arrow-right-circle" class="text-accent mr-2 mt-1"></i>
+                                    <span>Desarrollé un sitio web estático, responsivo y de alto rendimiento a partir de un diseño dado</span>
+                                </li>
+                                <li class="flex">
+                                    <i data-feather="arrow-right-circle" class="text-accent mr-2 mt-1"></i>
+                                    <span>Integré animaciones (AOS Library) para mejorar la interactividad y experiencia de usuario</span>
+                                </li>
+                                <li class="flex">
+                                    <i data-feather="arrow-right-circle" class="text-accent mr-2 mt-1"></i>
+                                    <span>Gestioné el despliegue continuo y publicación a través de Vercel</span>
+                                </li>
+                            </ul>
+<div class="flex flex-wrap gap-2">
+                                <span class="skill-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">HTML5</span>
+                                <span class="skill-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">CSS3</span>
+                                <span class="skill-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Bootstrap 5</span>
+                                <span class="skill-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                                <span class="skill-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Git</span>
+                                <span class="skill-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Github</span>
+                                <span class="skill-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Vercel</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 4 -->
+                <div class="experience-card bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/4 mb-6 md:mb-0">
+                            <h3 class="text-xl font-bold text-primary">Experiencia Profesional Relevante</h3>
+                            <p class="text-gray-600">2013 - Presente</p>
+                            <span class="text-secondary font-semibold">Profesor de Música y Pedagogía</span>
+                        </div>
+<div class="md:w-3/4">
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex">
+                                    <i data-feather="arrow-right-circle" class="text-accent mr-2 mt-1"></i>
+                                    <span><strong>Gestión de Proyectos:</strong> Planificación y ejecución de currículos educativos complejos, análogo a gestionar ciclos de desarrollo de software</span>
+                                </li>
+                                <li class="flex">
+                                    <i data-feather="arrow-right-circle" class="text-accent mr-2 mt-1"></i>
+                                    <span><strong>Comunicación & Colaboración:</strong> Capacidad demostrada para traducir conceptos complejos en ideas accesibles para diversas audiencias</span>
+                                </li>
+                                <li class="flex">
+                                    <i data-feather="arrow-right-circle" class="text-accent mr-2 mt-1"></i>
+                                    <span><strong>Adaptabilidad & Aprendizaje Continuo:</strong> Habilidad comprobada para aprender nuevas metodologías y adaptarse a entornos dinámicos</span>
+                                </li>
+                            </ul>
+</div>
+                    </div>
+                </div>
+
+                <!-- Experience 5 -->
+                <div class="experience-card bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/4 mb-6 md:mb-0">
+                            <h3 class="text-xl font-bold text-primary">Experiencia Profesional Relevante</h3>
+                            <p class="text-gray-600">2013 - Enero 2022</p>
+                            <span class="text-secondary font-semibold">Coordinador Internacional & Emprendedor</span>
+                        </div>
+<div class="md:w-3/4">
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex">
+                                    <i data-feather="arrow-right-circle" class="text-accent mr-2 mt-1"></i>
+                                    <span><strong>Liderazgo & Gestión de Equipos:</strong> Dirigí equipos multidisciplinarios de hasta 14 personas</span>
+                                </li>
+                                <li class="flex">
+                                    <i data-feather="arrow-right-circle" class="text-accent mr-2 mt-1"></i>
+                                    <span><strong>Comunicación Intercultural:</strong> Comunicación efectiva (en español e inglés) con equipos y clientes de diversos orígenes culturales</span>
+                                </li>
+                                <li class="flex">
+                                    <i data-feather="arrow-right-circle" class="text-accent mr-2 mt-1"></i>
+                                    <span><strong>Gestión de Clientes & Proyectos:</strong> Coordiné logística de eventos internacionales y fundé una startup de alimentos</span>
+                                </li>
+                            </ul>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section-padding">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 font-serif">Educación & <span class="text-primary">Certificaciones</span></h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Education 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-primary">Máster en Pedagogía Musical</h3>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">2023 - 2025</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Universidad Internacional de la Rioja UNIR (España)</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i data-feather="award" class="text-accent mr-2"></i>
+                            <span>Comunicación Técnica y Pedagógica</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="award" class="text-accent mr-2"></i>
+                            <span>Adaptabilidad y Resolución Creativa de Problemas</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="award" class="text-accent mr-2"></i>
+                            <span>Competencia Digital y Gestión de Herramientas Colaborativas</span>
+                        </li>
+                    </ul>
+</div>
+
+                <!-- Education 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-primary">Profesor de Música</h3>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">2008 - 2015</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Universidad Pedagógica Experimental Libertador, Venezuela</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i data-feather="award" class="text-accent mr-2"></i>
+                            <span>Comunicación y Formación Efectiva</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="award" class="text-accent mr-2"></i>
+                            <span>Gestión de Stakeholders</span>
+                        </li>
+                    </ul>
+</div>
+
+                <!-- Certifications -->
+                <div class="md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-6 text-center">Certificaciones</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                            <h4 class="font-bold text-lg mb-2">AI</h4>
+                            <p class="text-gray-600 text-sm mb-3">Pontificia Universidad Católica de Chile (Coursera)</p>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Python</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                            <h4 class="font-bold text-lg mb-2">Scrum Foundation Professional Certificate (SFPC)</h4>
+                            <p class="text-gray-600 text-sm mb-3">CertiPro - 2023</p>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Agile</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                            <h4 class="font-bold text-lg mb-2">Accediendo a datos con Python</h4>
+                            <p class="text-gray-600 text-sm mb-3">Universidad Anáhuac (edX) - 2022</p>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Python</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                            <h4 class="font-bold text-lg mb-2">CS50's Web Programming</h4>
+                            <p class="text-gray-600 text-sm mb-3">HarvardX (edX) - 2024</p>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Web Dev</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                            <h4 class="font-bold text-lg mb-2">Python Essentials 2</h4>
+                            <p class="text-gray-600 text-sm mb-3">Cisco Networking Academy</p>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Web Dev</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                            <h4 class="font-bold text-lg mb-2">Introducción al Desarrollo web 1 y 2</h4>
+                            <p class="text-gray-600 text-sm mb-3">Google Activate</p>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Web Dev</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                            <h4 class="font-bold text-lg mb-2">Learn to Program: The Fundamentals</h4>
+                            <p class="text-gray-600 text-sm mb-3">University of Toronto (Coursera)</p>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Python</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                            <h4 class="font-bold text-lg mb-2">Introduction to Python Programming I</h4>
+                            <p class="text-gray-600 text-sm mb-3">Pontificia Universidad Católica de Chile (Coursera)</p>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Python</span>
                         </div>
                         
-                        <div>
-                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Asunto</label>
-                            <input type="text" name="subject" id="subject" required 
-                                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none transition">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 font-serif">Habilidades <span class="text-primary">& Tecnologías</span></h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="skill-badge bg-white p-6 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow">
+                    <i data-feather="code" class="w-12 h-12 text-primary mx-auto mb-4"></i>
+                    <h3 class="font-bold text-lg">Frontend</h3>
+                    <p class="text-gray-600 text-sm">HTML5, CSS3, JavaScript, Bootstrap</p>
+                </div>
+                <div class="skill-badge bg-white p-6 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow">
+                    <i data-feather="server" class="w-12 h-12 text-primary mx-auto mb-4"></i>
+                    <h3 class="font-bold text-lg">Backend</h3>
+                    <p class="text-gray-600 text-sm">Python, Flask, Django, Node.js</p>
+                </div>
+                <div class="skill-badge bg-white p-6 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow">
+                    <i data-feather="database" class="w-12 h-12 text-primary mx-auto mb-4"></i>
+                    <h3 class="font-bold text-lg">Bases de Datos</h3>
+                    <p class="text-gray-600 text-sm">PostgreSQL, MySQL, SQLite</p>
+                </div>
+                <div class="skill-badge bg-white p-6 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow">
+                    <i data-feather="tool" class="w-12 h-12 text-primary mx-auto mb-4"></i>
+                    <h3 class="font-bold text-lg">Herramientas</h3>
+                    <p class="text-gray-600 text-sm">Git, GitHub, Figma, Vercel</p>
+                </div>
+</div>
+            <div class="mt-12 bg-white p-8 rounded-2xl shadow-lg">
+                <h3 class="text-2xl font-bold mb-6 text-center">Idiomas</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="text-center">
+                        <div class="relative w-32 h-32 mx-auto mb-4">
+                            <svg class="w-full h-full" viewBox="0 0 36 36">
+                                <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#eee" stroke-width="3"></path>
+                                <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#008080" stroke-width="3" stroke-dasharray="90, 100"></path>
+                            </svg>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="text-2xl font-bold">C1</span>
+                            </div>
+</div>
+                        <h4 class="text-xl font-bold">Inglés</h4>
+                        <p class="text-gray-600">Avanzado</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="relative w-32 h-32 mx-auto mb-4">
+                            <svg class="w-full h-full" viewBox="0 0 36 36">
+                                <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#eee" stroke-width="3"></path>
+                                <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#0A2342" stroke-width="3" stroke-dasharray="100, 100"></path>
+                            </svg>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="text-2xl font-bold">Nativo</span>
+                            </div>
+</div>
+                        <h4 class="text-xl font-bold">Español</h4>
+                        <p class="text-gray-600">Nativo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 font-serif">Contáctame</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+                <p class="mt-6 text-xl text-gray-600 max-w-2xl mx-auto">
+                    ¿Tienes un proyecto en mente? ¡Me encantaría colaborar contigo!
+                </p>
+            </div>
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <form action="https://formsubmit.co/rioboo.2@hotmail.com" method="POST" class="bg-white p-8 rounded-2xl shadow-lg">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Nombre</label>
+                            <input type="text" name="name" required id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
                         </div>
-                        
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Mensaje</label>
-                            <textarea name="message" id="message" rows="5" required 
-                                      class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none transition"></textarea>
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" name="email" required id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
                         </div>
-                        
-                        <button type="submit" 
-                                class="px-6 py-3 bg-accent text-white font-medium rounded-lg hover:bg-secondary transition-colors">
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Mensaje</label>
+                            <textarea name="message" required id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary text-white font-semibold py-3 px-6 rounded-lg hover:bg-secondary transition-colors">
                             Enviar Mensaje
                         </button>
-                    </form>
+</form>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-gradient-to-br from-primary to-accent p-8 rounded-2xl text-white h-full">
+                        <h3 class="text-2xl font-bold mb-6">Información de Contacto</h3>
+<div class="space-y-6">
+                            <div class="flex items-start">
+                                <i data-feather="mail" class="w-6 h-6 mr-4 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-lg">Email</h4>
+                                    <p><- Use el formulario para contactarme</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-feather="github" class="w-6 h-6 mr-4 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-lg">GitHub</h4>
+                                    <p>github.com/Freddy-Rioboo</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-feather="linkedin" class="w-6 h-6 mr-4 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-lg">LinkedIn</h4>
+                                    <a href="https://www.linkedin.com/in/freddy-david-riobo-dev2024/" class="hover:underline">linkedin.com/in/freddy-david-riobo-dev2024/</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-feather="map-pin" class="w-6 h-6 mr-4 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-lg">Ubicación</h4>
+                                    <p>Venezuela</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-12">
+                            <h4 class="font-bold text-lg mb-4">Disponibilidad</h4>
+                            <p class="mb-2">Freelance: Disponible</p>
+                            <p>Proyectos a tiempo completo: Consultar</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-primary text-white py-8">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col items-center">
-                <div class="flex space-x-6 mb-4">
-                    <a href="https://github.com/freddy-rioboo" class="text-2xl hover:text-light transition-colors" target="_blank" title="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/" class="text-2xl hover:text-light transition-colors" target="_blank" title="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
+    <footer class="bg-primary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <span class="text-2xl font-bold">Freddy<span class="text-secondary">Riobo</span></span>
+                    <p class="mt-2 text-cream">Desarrollador Web Full-Stack - Inteligencia Artificial</p>
                 </div>
-                <p class="text-center text-light">
-                    © 2023 Freddy Riobo. Todos los derechos reservados.
-                </p>
+                <div class="flex space-x-6">
+                    <a href="https://github.com/Freddy-Rioboo" class="text-cream hover:text-secondary">
+                        <i data-feather="github" class="w-6 h-6"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/freddy-david-riobo-dev2024/" class="text-cream hover:text-secondary">
+                        <i data-feather="linkedin" class="w-6 h-6"></i>
+                    </a>
+                    <!--<a href="#" class="text-cream hover:text-secondary">
+                        <i data-feather="twitter" class="w-6 h-6"></i>
+                    </a> -->
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-cream text-center text-cream">
+                <p>&copy; 2025 Freddy Riobo. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
-
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="fixed bottom-6 right-6 bg-accent text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <script>
-        // Back to top button
-        const backToTopButton = document.getElementById('backToTop');
+<script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
         
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.remove('opacity-0', 'invisible');
-                backToTopButton.classList.add('opacity-100', 'visible');
-            } else {
-                backToTopButton.classList.remove('opacity-100', 'visible');
-                backToTopButton.classList.add('opacity-0', 'invisible');
-            }
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
         
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-        
-        // Smooth scrolling for navigation links
+        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
                     window.scrollTo({
-                        top: targetElement.offsetTop - 80,
+                        top: target.offsetTop - 80,
                         behavior: 'smooth'
                     });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
                 }
             });
         });
         
-        // Animation on scroll
-        const animateOnScroll = () => {
-            const elements = document.querySelectorAll('.animate-fade-in');
-            
-            elements.forEach(element => {
-                const elementPosition = element.getBoundingClientRect().top;
-                const screenPosition = window.innerHeight / 1.3;
-                
-                if (elementPosition < screenPosition) {
-                    element.classList.add('animate-fade-in');
-                }
-            });
-        };
-        
-        window.addEventListener('scroll', animateOnScroll);
-        window.addEventListener('load', animateOnScroll);
+        // Initialize Feather Icons
+        feather.replace();
     </script>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  <!-- AOS-->
-    <script>
-  AOS.init();
-</script>
 </body>
 </html>
